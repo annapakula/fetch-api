@@ -21,9 +21,9 @@ fetch ("https://api.github.com/users/annamazurek/repos?sort=created&direction=de
   .then (resp => resp.json())
   .then (resp => {
     const repositories = resp; //żeby było czytelniej (dobra praktyka)
-    for (const repository of repositories){
-      list.innerHTML += `<li class="list__item"><a class="list__link" href="${repository.html_url}">${repository.name}</a></li>`;
-      
+    for (const {name, html_url} of repositories){
+      list.innerHTML += `<li class="list__item"><a class="list__link" href="${html_url}">${name}</a></li>`;
+    
     }
   })
   .catch(err => {
