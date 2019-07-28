@@ -1,0 +1,46 @@
+@import "_normalize";
+@import "_variables";
+
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: $violet;
+  font-family: monospace, Arial, Helvetica, sans-serif;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-header {
+  color: $yellow;
+  margin-bottom: 3rem;
+}
+
+.list {
+  margin: 0;
+  padding: 3rem;
+  border: 2px solid white;
+  box-shadow: 0 0 .5rem white, 0 0 1.6rem $yellow;
+  max-width: fit-content;
+  width: 100%;
+  list-style: none;
+  &__item {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    text-align: center;
+
+  }  
+  &__link {
+    text-decoration: none;
+    color: white;
+
+  }
+}
